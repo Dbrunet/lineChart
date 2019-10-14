@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
         lineChart.setDrawGridBackground(false);
         lineChart.setHighlightPerDragEnabled(true);
 
+        //FIXME AJUSTA MARGINS NO GRÁFICO
+//        lineChart.setExtraOffsets(10, 10, 10, 10);
+
         //FIXME VALORES DA LINHA PRINCIPAL DO GRÁFICO (EIXO X, EIXO Y)
         ArrayList<Entry> entries = new ArrayList<>();
         for (int x = 0; x < myData.getGrafico().size(); x++) {
@@ -111,7 +114,11 @@ public class MainActivity extends AppCompatActivity {
         xAxis.setGranularityEnabled(true);
         xAxis.setGridColor(colorGridLines);
         xAxis.setGranularity(1f); // one hour
+        xAxis.setAvoidFirstLastClipping(true);
 
+        //FIXME FIXA UMA MARGEM NA LABEL DO EIXOX, MAS A LINHA DO GRÁFICO RECEBE O VALOR TAMBÉM. NÃO SENDO O QUE ESPERAVAMOS.
+//        xAxis.setSpaceMax(0.1f);
+//        xAxis.setSpaceMin(0.1f);
 
         final ArrayList<String> entriesX = new ArrayList<>();
         for (int x = 0; x < myData.getGrafico().size(); x++) {
