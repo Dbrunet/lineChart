@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         xAxis.setGranularity(1f); // one hour
         xAxis.setAvoidFirstLastClipping(true);
 
-        //FIXME FIXA UMA MARGEM NA LABEL DO EIXOX, MAS A LINHA DO GRÁFICO RECEBE O VALOR TAMBÉM. NÃO SENDO O QUE ESPERAVAMOS.
+        //FIXME FIXA UMA MARGEM NA LABEL DO EIXO-X, MAS A LINHA DO GRÁFICO RECEBE O VALOR TAMBÉM. NÃO SENDO O QUE ESPERAVAMOS.
 //        xAxis.setSpaceMax(0.1f);
 //        xAxis.setSpaceMin(0.1f);
 
